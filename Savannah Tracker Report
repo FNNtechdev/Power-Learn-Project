@@ -1,0 +1,44 @@
+Savannah Tracker Report: Precision Prompting for AfyaTech
+
+Introduction
+In maternal health, generic advice is a clinical risk. Precision prompting ensures that AI interventions are not just medically accurate, but logistically and culturally actionable. By grounding prompts in local realities  like M-Pesa liquidity and rural transport we bridge the gap between standard care and accessible care.
+
+Part 1: Rewritten Prompts
+Prompt A: Nutrition Advice (AIM + MAP)
+The Rewrite:
+"Act as a Kenyan maternal health nutritionist. Based on a diet primarily consisting of matooke and ugali, suggest three local, affordable additions like groundnuts, silverfish or omena, or cowpea leaves to increase protein and iron intake for a mother in her second trimester. Keep the response under 160 characters for SMS."
+
+AIM Framework: Action: Suggest nutritional additions; Information: Local staples like matooke or ugali; 
+Method: SMS-constrained format.
+MAP Framework: Material: Regional food data; Audience: Rural expectant mothers; Purpose: Combat nutritional deficiencies with accessible food.
+Key Improvement: Local Resource Optimization.Unlike the original, this avoids suggesting "leafy greens" that might be out of season or unaffordable, focusing instead on high-impact local proteins like omena.
+
+Prompt B: Appointment Reminders (AIM + MAP)
+The Rewrite:
+"Act as an AfyaTech Clinic Coordinator. Draft a reminder for a prenatal visit. Instruct the user to verify their M-Pesa balance for transport and to account for a 2-hour travel window if walking. Include an option for the user to request a Community Health Worker  escort if the route is unsafe."
+
+AIM Framework: Action: Draft reminder; Information: M-Pesa/travel time/CHW availability; Method: Instructional SMS.
+MAP Framework: Material: Rural logistics; Audience: Mothers >5km from clinics; Purpose: Reduce appointment no-shows.
+Key Improvement:Logistical Realism.By mentioning M-Pesa and CHWs, the prompt addresses the two primary reasons for missed visits in rural areas: cost and physical safety.
+
+Prompt C: Emergency Triage (Chain-of-Thought + Verifier)
+The Rewrite:
+"You are a triage assistant. When a user reports feeling 'unwell,' follow this logic:
+1. Identify if the user has 'Danger Signs' like bleeding, severe headache, or blurred vision.
+2. Ask: 'Are you currently able to move your baby?' and 'Do you have high fever?'
+3. Verify: Before recommending a hospital, check if the user is within 10km of a 24-hour facility. 
+4. Output: Provide a calm instruction to contact their designated CHW immediately for a primary assessment."
+
+CoT Component: Forced sequence: Identify → Question → Verify → Action.
+Verifier Pattern:The AI must check proximity to facilities before issuing a high-stress "hospitalize" command.
+Key Improvement:Reduced System Strain. This prevents panic and unnecessary travel costs for minor ailments while ensuring high-risk cases are escalated through the CHW network.
+
+Part 2: Reflection
+Precision prompting moves AI from a "repository of facts" to a "context-aware tool." In East African healthcare, the bottleneck isn't usually a lack of medical knowledge, but a lack of applicable knowledge. When AI accounts for the 0.9/10,000 doctor-to-patient ratio, it stops being a replacement for a doctor and starts being a force-multiplier for the Community Health Workers who actually sustain the system.
+
+Quiz: Savannah Adventure
+
+1.  MAP Failure & Redesign: The failure occurred in Material (M) the model used a global training set (kale) instead of a local agricultural dataset. Redesign: "Suggest indigenous vegetables like Managu or Terere that are drought-resistant and common in Western Kenya."
+2.Verifier Pattern Application: To prevent panic, the Verifier Pattern forces the AI to ask: "Is the pain sharp or a dull ache?" and "Is it accompanied by bleeding?" This filters out Braxton Hicks contractions (false labor) from actual emergencies before suggesting expensive transport.
+3.CoT vs. Summarization: Direct summarization fails because WHO guidelines are often written for high-resource settings. Chain-of-Thought allows the AI to reason through the guidelines: "The WHO suggests X, but the user only has access to Y, therefore suggests  Z." This creates a personalized care plan rather than a generic lecture.
+4. OCEAN Framework: The Evaluation (E) and Analysis (A) phases of OCEAN require the AI to cross-reference data against current 2025/2026 Ministry of Health statistics. If the data is outdated, the framework triggers a "flag for human review," preventing the dissemination of misinformation to stakeholders.
