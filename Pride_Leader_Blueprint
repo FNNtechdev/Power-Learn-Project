@@ -1,0 +1,36 @@
+Pride Leader Blueprint
+Introduction 
+In agritech, automation fails when it forgets the human. Farmers don't need "black box" algorithms; they need reliable partners. Orchestration beats solo AI because it mirrors the community: the Scout watches the market like a hawk, the Guardian protects the route, and the Hunter ensures the human manager never loses touch with the field.
+Agent 1: The Scout (The Market Seer)
+Framework: RANK The Scout is the digital equivalent of a trusted neighbor who always knows the price of maize in the next town.
+Role: Price Storyteller. It doesn't just push numbers; it contextualizes trends using the Rwanda Agricultural Board API and local E-Soko data.
+Authority: The Quiet Partner. It can suggest a sale but is forbidden from auto-committing. It is capped at 3 SMS updates, ensuring it doesn't become a nuisance during the busy harvest.
+Notification Triggers: If prices drop suddenly by 20% a flash drought in value, it immediately alerts the human manager to investigate if a buyer is price-gouging.
+Kill Switch: If the Scout starts sending erratic advice, a simple USSD *700# from any staff phone silences it instantly.
+GUARD Rail: Proxy Erasure: It is hard-coded to ignore a farmer’s last name or specific village to ensure a farmer in Gulu gets the same fair price as one near Kampala.
+CYCLE Engine: The Weekly Baraza: Every Sunday, it generates a Plain Language Report explaining why prices moved, so the team can explain it to farmers over the radio.
+Specialized Tool: Microsoft AutoGen to play Devil's Advocate against its own price predictions.
+ Agent 2: The Guardian (The Route Protector)
+Framework: TRAIL The Guardian understands that a harvest only has value if it reaches the warehouse before the rain.
+Transient Memory: Remembers that this specific truck is currently stuck at a checkpoint, so it shouldn't book it for another job yet.
+Relational Memory: Remembers a farmer's preferred pickup spot by the old mango tree only if they’ve opted in via a Clear to Save SMS.
+Archival Memory: Learns which backroads become mud-traps after a storm, keeping that knowledge anonymized to protect individual farm locations.
+Inheritance Rules: When handing off to the Hunter, it shares the truck’s ETA but hides the driver’s personal phone number to prevent unauthorized contact.
+Land Rights: Every byte of memory stays on AWS Africa, honoring the Uganda Data Protection Act treating the farmer’s data as their own digital plot of land.
+GUARD Rail: Dignity Check: Rejects any automated denial message that sounds " robotic. If a truck isn't available, the message must offer an apology and a try again window.
+CYCLE Engine: The Road Log: It captures every Failed Pickup and tags it: Was it the weather? A flat tire? A wrong turn?
+Specialized Tool: Google Maps Route Optimization (layered with local weather data).
+
+Agent 3: The Hunter (The Bridge Builder)
+Framework: HUNT The Hunter ensures the AI Pride never forgets it works for humans. It is the liaison between the digital scout and the person in the office.
+Handoff Trigger: Once the Scout finds a buyer for 500kg of maize, it doesn't just save it. It pings the Guardian to check for a truck. Only if a truck is found does it alert the Human Pride Leader.
+Unified Context: Creates a single Dashboard View where the human can see the Farmer's Name, the Agreed Price, and the Truck's Plate Number all in one place.
+Negotiation Rules: If the Guardian says No trucks available, the Hunter is forbidden from telling the farmer the deal is done. It must escalate to a human to find a creative solution.
+Termination Condition: The mission is Hunted only when the farmer receives their mobile money payment and the warehouse confirms receipt of the bags.
+GUARD Rail: The Elder's Test: Every month, a human tests the Hunter's logic: Could I explain this decision to a village elder who doesn't use a smartphone? If the answer is no, the logic is rewritten.
+CYCLE Engine: Human-in-Loop Validation: All High Risk changes to the pride's behavior must be Greenlit  by a human via a WhatsApp/Slack approval.
+Specialized Tool: CrewAI to ensure the agents don't argue over who should talk to the farmer first.
+Reflection: Sovereignty in the Field
+Human sovereignty isn't about doing the work; it's about being the final authority. By using the RANK and HUNT frameworks, we ensure the AI handles the exhausting work of tracking 100 prices and 50 trucks, but the Chief AI Officer holds the Kill Switch.
+We preserve dignity by ensuring the technology speaks the local language both literally and culturally. In this Safari, the AI provides the speed, but the humans provide the direction. We don't just move grain; we build trust, one coordinated hunt at a time.
+
